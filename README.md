@@ -1,2 +1,3 @@
 tpnote
-![alt text](https://raw.githubusercontent.com/CitroXD/TPNote/master/ScreenShotCodeClimate.png)
+
+![alt text](https://github.com/CitroXD/TPNote/blob/master/ScreenShotCodeClimate.PNG)
