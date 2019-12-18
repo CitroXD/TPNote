@@ -15,7 +15,7 @@ public class Porte {
 		return result;
 	}
 
-	@Override
+/*	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -28,7 +28,7 @@ public class Porte {
 			return false;
 		return true;
 	}
-
+*/
 	public int getNumero() {
 		return numero;
 	}

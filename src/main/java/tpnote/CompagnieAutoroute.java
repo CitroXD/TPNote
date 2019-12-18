@@ -59,12 +59,10 @@ public class CompagnieAutoroute {
 	public Tarif getTarifExact(Porte Entree, Porte Sortie) {
 		Tarif trouve = null;
 		for (Tarif t : tarifs) {
-			if (t.getEntree().equals(Entree)) {
-				if (t.getSortie().equals(Sortie)) {
+			if (t.getEntree().equals(Entree)&&(t.getSortie().equals(Sortie))){
 					trouve = t;
 				}
 			}
-		}
 		return (trouve);
 	}
 
