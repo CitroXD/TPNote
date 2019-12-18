@@ -30,6 +30,12 @@ public class CompagnieAutoroute {
 		this.tarifs = tarifs;
 	}
 
+	/**
+	 * Retourne le prix d'un trajet entre les portes Entree et Sortie. Fait appel aux méthodes getTarifExact et getTarifCalcule
+	 * @param Entree
+	 * @param Sortie
+	 * @return
+	 */
 	public BigDecimal obtenirTarif(Porte Entree, Porte Sortie) {
 		Tarif tarif = null;
 		tarif = getTarifExact(Entree, Sortie);
@@ -38,6 +44,14 @@ public class CompagnieAutoroute {
 		}
 		return tarif.getPrix();
 	}
+	
+	/**
+	 * Calcule et retourne le tarif associé à un trajet entre les portes Entree et Sortie en le calculant
+	 * Ajoute aussi le nouveau tarif à la liste des tarifs connus
+	 * @param Entree 
+	 * @param Sortie
+	 * @return
+	 */
 
 	public Tarif getTarifCalcule(Porte Entree, Porte Sortie) {
 		Tarif Calc;
@@ -55,7 +69,12 @@ public class CompagnieAutoroute {
 		tarifs.add(Calc);
 		return (Calc);
 	}
-
+/**
+ * Retourne le tarif entre les deux portes s'il existe déja dans la liste des tarifs
+ * @param Entree
+ * @param Sortie
+ * @return
+ */
 	public Tarif getTarifExact(Porte Entree, Porte Sortie) {
 		Tarif trouve = null;
 		for (Tarif t : tarifs) {
